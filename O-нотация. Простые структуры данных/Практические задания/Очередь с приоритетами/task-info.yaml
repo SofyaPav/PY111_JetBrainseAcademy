@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 258
-        length: 68
+        length: 211
         placeholder_text: "...  # TODO использовать deque для реализации очереди с при\
       оритетами"
         initial_state:
@@ -15,20 +15,20 @@ files:
           self.priority_queue: dict[int, deque] = {
                       priority: deque() for priority in range(self.HIGH_PRIORITY, self.LOW_PRIORITY + 1)
                   }
-        selected: false
-        status: Unchecked
-      - offset: 601
-        length: 37
+        selected: true
+        status: Failed
+      - offset: 744
+        length: 76
         placeholder_text: "...  # TODO реализовать метод enqueue"
         initial_state:
           length: 37
           offset: 601
         initialized_from_dependency: false
         encrypted_possible_answer: "self.priority_queue[priority].append(elem)"
-        selected: false
-        status: Unchecked
-      - offset: 862
-        length: 37
+        selected: true
+        status: Failed
+      - offset: 1044
+        length: 207
         placeholder_text: "...  # TODO реализовать метод dequeue"
         initial_state:
           length: 37
@@ -41,9 +41,9 @@ files:
           
                   raise IndexError("Извлечение из пустой очереди не возможно")
         selected: false
-        status: Unchecked
-      - offset: 1467
-        length: 34
+        status: Failed
+      - offset: 1819
+        length: 310
         placeholder_text: "...  # TODO реализовать метод peek"
         initial_state:
           length: 34
@@ -58,10 +58,10 @@ files:
                       raise IndexError("Индекс все границ очереди")
           
                   return queue[ind]
-        selected: false
-        status: Unchecked
-      - offset: 1573
-        length: 35
+        selected: true
+        status: Failed
+      - offset: 2201
+        length: 100
         placeholder_text: "...  # TODO реализовать метод clear"
         initial_state:
           length: 35
@@ -70,10 +70,10 @@ files:
         encrypted_possible_answer: |-
           for queue in self.priority_queue.values():
                       queue.clear()
-        selected: false
-        status: Unchecked
-      - offset: 1689
-        length: 37
+        selected: true
+        status: Failed
+      - offset: 2382
+        length: 145
         placeholder_text: "...  # TODO реализовать метод __len__"
         initial_state:
           length: 37
@@ -85,8 +85,8 @@ files:
                       len_ += len(queue)
           
                   return len_
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -97,5 +97,8 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Error
+  time: "Tue, 24 Dec 2024 16:28:53 UTC"
 record: -1

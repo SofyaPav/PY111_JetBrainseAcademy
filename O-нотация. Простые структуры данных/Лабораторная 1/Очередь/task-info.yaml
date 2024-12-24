@@ -3,7 +3,7 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 204
+      - offset: 230
         length: 35
         placeholder_text: "...  # TODO инициализировать список"
         initial_state:
@@ -12,9 +12,9 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
         selected: false
-        status: Unchecked
-      - offset: 418
-        length: 37
+        status: Failed
+      - offset: 444
+        length: 58
         placeholder_text: "...  # TODO реализовать метод enqueue"
         initial_state:
           length: 37
@@ -22,28 +22,28 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
         selected: false
-        status: Unchecked
-      - offset: 679
-        length: 37
+        status: Failed
+      - offset: 726
+        length: 85
         placeholder_text: "...  # TODO реализовать метод dequeue"
         initial_state:
           length: 37
           offset: 679
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
-        selected: false
-        status: Unchecked
-      - offset: 1198
-        length: 34
+        selected: true
+        status: Failed
+      - offset: 1284
+        length: 63
         placeholder_text: "...  # TODO реализовать метод peek"
         initial_state:
           length: 34
           offset: 1198
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
-        selected: false
-        status: Unchecked
-      - offset: 1304
+        selected: true
+        status: Failed
+      - offset: 1419
         length: 35
         placeholder_text: "...  # TODO реализовать метод clear"
         initial_state:
@@ -51,9 +51,9 @@ files:
           offset: 1304
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
-        selected: false
-        status: Unchecked
-      - offset: 1420
+        selected: true
+        status: Failed
+      - offset: 1535
         length: 37
         placeholder_text: "...  # TODO реализовать метод __len__"
         initial_state:
@@ -62,7 +62,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: '...'
         selected: false
-        status: Unchecked
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -73,6 +73,9 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Error
+  time: "Tue, 24 Dec 2024 18:10:48 UTC"
 record: -1
 solution_hidden: false

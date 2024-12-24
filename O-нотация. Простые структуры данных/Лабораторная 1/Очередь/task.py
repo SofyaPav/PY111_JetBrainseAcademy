@@ -6,6 +6,8 @@ from typing import Any
 
 class Queue:
     def __init__(self):
+        self._queue = []
+
         """
         Очередь с помощью python list
         TODO Описать где начало и конец очереди
@@ -18,7 +20,7 @@ class Queue:
 
         :param elem: Элемент, который должен быть добавлен
         """
-        ...  # TODO реализовать метод enqueue
+        self._queue.append(elem)  # TODO реализовать метод enqueue
 
     def dequeue(self) -> Any:
         """
@@ -28,7 +30,7 @@ class Queue:
 
         :return: Извлеченный с начала очереди элемент.
         """
-        ...  # TODO реализовать метод dequeue
+        self._queue.pop(0)  # TODO реализовать операцию pop  # TODO реализовать метод dequeue
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -41,7 +43,7 @@ class Queue:
 
         :return: Значение просмотренного элемента
         """
-        ...  # TODO реализовать метод peek
+        return self._queue[ind]  # TODO реализовать метод peek
 
     def clear(self) -> None:
         """ Очистка очереди. """
@@ -50,3 +52,6 @@ class Queue:
     def __len__(self):
         """ Количество элементов в очереди. """
         ...  # TODO реализовать метод __len__
+
+
+
