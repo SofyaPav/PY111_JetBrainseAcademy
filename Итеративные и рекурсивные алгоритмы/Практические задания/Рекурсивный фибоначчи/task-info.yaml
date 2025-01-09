@@ -21,7 +21,7 @@ files:
           
               return fib_recursive(n - 1) + fib_recursive(n - 2)
         selected: false
-        status: Unchecked
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -36,5 +36,9 @@ files:
     visible: true
     is_binary: true
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: "ValueError not raised : Что такое -35 число фибоначчи? Должна вызывать\
+    ся ошибка"
+  time: "Thu, 09 Jan 2025 15:28:36 UTC"
 record: -1
