@@ -20,8 +20,8 @@ files:
                       [item for item in container if item == pivot] +
                       sort([item for item in container if item > pivot])
               )
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -36,5 +36,13 @@ files:
     visible: true
     is_binary: true
     learner_created: false
-status: Unchecked
+  - name: help.py
+    visible: true
+    learner_created: true
+status: Failed
+feedback:
+  message: "[] != None : Пустая последовательность должна сортироваться :)"
+  time: "Wed, 15 Jan 2025 15:36:58 UTC"
+  expected: "[]"
+  actual: None
 record: -1

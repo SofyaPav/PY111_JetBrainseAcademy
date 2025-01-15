@@ -13,18 +13,14 @@ def min_search(arr: List[int]) -> int:
     """
     ...  # TODO реализовать итеративный линейный поиск
 
-    min_ = arr[0]
-    for i in range(0, len(arr)):
+    min_ind = 0
+    for i in range(1, len(arr)):
         # print(i)
         # print(arr[i])
-        if arr[i] < min_:
-            min_ = i
-        if arr[i] > min_:
-            min_ = min_
-        continue
-
-        return i
-    print(i)
+        if arr[i] < arr[min_ind]:
+            min_ind = i
+    return min_ind
+    print(min_ind)
 
 
-print(min_search([11, 30, 7]))
+print(min_search([1, 30, 55]))

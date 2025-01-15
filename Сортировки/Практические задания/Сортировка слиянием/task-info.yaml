@@ -3,8 +3,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 458
-        length: 42
+      - offset: 1901
+        length: 0
         placeholder_text: "...  # TODO реализуйте сортировку слиянием"
         initial_state:
           length: 42
@@ -56,8 +56,8 @@ files:
           
               # 3. После сортировки двух частей массива к ним применяется процедура слияния
               return _merge(new_left, new_right)
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -72,5 +72,11 @@ files:
     visible: true
     is_binary: true
     learner_created: false
-status: Unchecked
+  - name: help.py
+    visible: true
+    learner_created: true
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 15 Jan 2025 17:40:10 UTC"
 record: -1

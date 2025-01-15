@@ -13,3 +13,19 @@ def sort(container: List[int]) -> List[int]:
     :return: Отсортированная в порядке возрастания последовательность
     """
     ...  # TODO реализовать алгоритм быстрой сортировки
+
+# pivot - опорный элемент
+
+    if not container:
+        return container
+
+    pivot = container[0]
+    return (
+            sort([item for item in container if item < pivot]) +
+            [item for item in container if item == pivot] +
+            sort([item for item in container if item > pivot])
+    )
+
+
+
+print(sort([2,4,7,1,2,3,4,5]))
