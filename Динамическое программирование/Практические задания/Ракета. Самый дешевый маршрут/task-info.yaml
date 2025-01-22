@@ -28,7 +28,7 @@ files:
           
               return table
         selected: false
-        status: Unchecked
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -43,5 +43,11 @@ files:
     visible: true
     is_binary: true
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: "None != [[2, 9, 18, 21], [14, 13, 14, 23], [15, 18, 16, 21]] : Таблица\
+    \ стоимостей рассчитана неверно :("
+  time: "Wed, 22 Jan 2025 18:07:58 UTC"
+  expected: None
+  actual: "[[2, 9, 18, 21], [14, 13, 14, 23], [15, 18, 16, 21]]"
 record: -1

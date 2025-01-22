@@ -12,6 +12,23 @@ def rocket_coasts(table: List[List[int]]) -> List[List[int]]:
     """
     ...  # TODO рассчитать таблицу стоимостей перемещений
 
+    table = table.copy()
+    n = len(table)
+    m = len(table[0])
+
+    # Цикл по первому столбцу
+    for row_index in range(n - 1):
+        table[row_index + 1][0] += table[row_index][0]
+    # Цикл по первой строке
+    for col_index in range(m - 1):
+        table[0][col_index + 1] += table[0][col_index]
+
+    for i in range(1, n):
+        for j in range(1, m):
+            table[i][j] += min(table[i - 1][j], table[i][j - 1])
+
+    return table
+
 
 if __name__ == '__main__':
     coasts_ceil = [

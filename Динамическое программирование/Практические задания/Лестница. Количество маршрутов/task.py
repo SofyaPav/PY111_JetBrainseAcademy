@@ -11,6 +11,23 @@ def stairway_path(count_stairs: int) -> List[int]:
     """
     ...  # TODO найти количество маршрутов до каждой ступени
 
+    if count_stairs < 0:
+        raise ValueError("Количество ступеней должно быть не отрицательным числом")
+
+    if count_stairs == 0:
+        return [0]
+
+    if count_stairs == 1:
+        return [0, 1]
+
+    count_paths = [0] * (count_stairs + 1)
+    count_paths[0] = 0
+    count_paths[1] = 1
+
+    for i in range(2, count_stairs + 1):  # начиная с 2 до n включительно
+        count_paths[i] = count_paths[i-1] + count_paths[i-2]
+
+    return count_paths
 
 if __name__ == '__main__':
     print(stairway_path(0))  # [0]

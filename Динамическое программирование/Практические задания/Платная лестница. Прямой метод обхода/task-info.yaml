@@ -25,8 +25,8 @@ files:
                   coast[current_step] = stairway[current_step] + min(coast[current_step - 1], coast[current_step - 2])
           
               return coast[-1]
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Failed
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -37,5 +37,8 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Syntax Error
+  time: "Wed, 22 Jan 2025 17:28:13 UTC"
 record: -1
